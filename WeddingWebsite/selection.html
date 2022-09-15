@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Planning Guide</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: grey;
+  overflow-x: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.sidenav li{
+    list-style-type: none;
+}
+
+.sidenav p{
+    color: white;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.h3-text{
+    text-align: center;
+    padding: 25px;
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <p>Planner
+      <ul>
+        <li><a href="profilePage.php">My Profile</a></li>
+        <li><a href="planningGuide.php">Planning Guide</a></li>
+        <li><a href="myVendorList.php">My Vendor List</a></li>
+        <li><a href="#">Budget</a></li>
+        <li><a href="#">Calendar</a></li>
+        <li><a href="#">Guest List</a></li>
+      </ul>
+    </p>
+    
+  <p>Big Four
+      <ul>
+        <li><a href="#">Wedding Venue</a></li>
+        <li><a href="#">Catering</a></li>
+        <li><a href="#">Decor</a></li>
+        <li><a href="#">Photography & Video</a></li>
+      </ul>
+    </p>
+    
+  <p>Dashboard
+      <ul>
+        <li><a href="#">Stats- Single Page View</a></li>
+        <li><a href="#">Stats- Single Page View</a></li>
+      </ul>
+    </p>
+
+    <p>Settings
+      <ul>
+        <li><a href="selection.html">Selections</a></li>
+      </ul>
+    </p>
+</div>
+
+<div class="content">
+<div class="h3-text">
+    <h2>Selections</h2>
+</div>
+<button class="accordion">1 year</button>
+<div class="panel">
+    <form action="insertAccordion.php" method="post">
+        <input type="checkbox" name="val[]" value="Have fun announcing your engagement!">
+        <label>Have fun announcing your engagement!</label><br>
+
+        <input type="checkbox"  name="val[]" value="Choose a date (or up to 3 so you can be flexible).">
+        <label for="vehicle2"> Choose a date (or up to 3 so you can be flexible).</label><br>
+
+        <input type="checkbox"  name="val[]" value="Talk budget and decide who's contributing what">
+        <label for="vehicle3">Talk budget and decide who's contributing what</label><br>
+
+        <input type="checkbox"  name="val[]" value="Discover your wedding style. Take our quiz">
+        <label for="vehicle1"> Discover your wedding style. Take our quiz</label><br>
+
+        <input type="checkbox"  name="val[]" value="Choose your wedding party:maid of honor, bridesmaids, best man, groomsmen,flower girl and ring bearer">
+        <label for="vehicle2"> Choose your wedding party:<br>
+            maid of honor, bridesmaids, best man, groomsmen,<br>
+            flower girl and ring bearer</label><br>
+
+        <input type="checkbox"  name="val[]" value="Create a wedding website">
+        <label for="vehicle3">Create a wedding website.</label><br>
+
+        <input type="checkbox" name="val[]" value="Get engagement ring insured and consider purchasing wedding insurance">
+        <label for="vehicle1"> Get engagement ring insured and consider 
+            purchasing wedding insurance</label><br>
+
+        <input type="checkbox" name="val[]" value="Begin compiling a guest list">
+        <label for="vehicle2">Begin compiling a guest list</label><br>
+
+        <input type="checkbox" name="val[]" value="Explore ceremony and reception venue options">
+        <label for="vehicle3">Explore ceremony and reception venue options</label><br>
+
+        <input type="checkbox" name="val[]" value="Start assembling a team of wedding pros:planner, photographer, videographer, caterer,florist, and musicians">
+        <label for="vehicle1"> Start assembling a team of wedding pros: 
+            planner, photographer, videographer, caterer, 
+            florist, and musicians</label><br>
+
+        <input type="checkbox" name="val[]" value="Browse wedding dress and veil styles">
+        <label for="vehicle2"> Browse wedding dress and veil styles.</label><br>
+
+        <input type="checkbox" name="val[]" value="Create wedding and style boards on Pinterest.">
+        <label for="vehicle3"> Create wedding and style boards on Pinterest.</label><br>
+
+        <input type="checkbox"  name="val[]" value="Subscribe to Truly Engaging for wedding inspiration, tips, and deals">
+        <label for="vehicle1"> Subscribe to Truly Engaging for wedding 
+            inspiration, tips, and deals</label><br>
+
+        <input type="checkbox"  name="val[]" value="Get engagement photos taken">
+        <label for="vehicle2">  Get engagement photos taken</label><br>
+
+        <input type="checkbox" name="val[]" value="Start browsing Save the Date designs to find your favorite shape and size.">
+        <label for="vehicle3"> Start browsing Save the Date designs to find 
+            your favorite shape and size.</label><br>
+
+            <input type="checkbox"  name="val[]" value="See your favorite designs in person. Order custom Save the Date samples.">
+        <label for="vehicle1"> See your favorite designs in person. Order custom 
+            Save the Date samples. </label><br>
+
+        <input type="checkbox"  name="val[]" value="Place your full Save the Date order based on your favorite custom sample">
+        <label for="vehicle2"> Place your full Save the Date order based on your 
+            favorite custom sample</label><br><br>
+
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">10 - 11 Months </button>
+<div class="panel">
+    <form action="insert10_11months.php" method="post">
+        <input type="checkbox" name="val[]" value="Choose bridal party attire and accessories.">
+        <label>Choose bridal party attire and accessories.!</label><br>
+
+        <input type="checkbox"  name="val[]" value="Reserve ceremony and reception venues.">
+        <label for="vehicle2"> Reserve ceremony and reception venues.</label><br>
+
+        <input type="checkbox"  name="val[]" value="Book officiant and check into premarital counseling.">
+        <label for="vehicle3">Book officiant and check into premarital counseling.</label><br>
+
+        <input type="checkbox"  name="val[]" value="Hire photographer, videographer, caterer,
+                DJ/band, florist, and planner.">
+        <label for="vehicle1"> Hire photographer, videographer, caterer,
+                DJ/band, florist, and planner.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Finalize guest address list.">
+        <label for="vehicle2">  Finalize guest address list.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Mail your Save the Dates." >
+        <label for="vehicle3"> Mail your Save the Dates. </label><br>
+
+        <input type="checkbox" name="val[]" value="Purchase wedding dress, veil and undergarments">
+        <label for="vehicle1"> Purchase wedding dress, veil and undergarments</label><br>
+
+        <input type="checkbox" name="val[]" value="Establish a healthy skin and wellness routine.">
+        <label for="vehicle2">Establish a healthy skin and wellness routine.</label><br>
+
+        <input type="checkbox" name="val[]" value=" Research honeymoon destinations">
+        <label for="vehicle3"> Research honeymoon destinations</label><br>
+
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">8 - 9 Months </button>
+<div class="panel">
+    <form action="insert8_9months.php" method="post">
+        <input type="checkbox" name="val[]" value="Find 3 hotels (at different price points) 
+                for out-of-town guests.">
+        <label>Find 3 hotels (at different price points) 
+                for out-of-town guests.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Browse Wedding Invitation designs and 
+                  coordinating stationery (Enclosures, Programs, 
+                  Menu Cards, Thank Yous, and Favors).">
+        <label for="vehicle2">  Browse Wedding Invitation designs and 
+                  coordinating stationery (Enclosures, Programs, 
+                  Menu Cards, Thank Yous, and Favors).</label><br>
+
+        <input type="checkbox"  name="val[]" value="Refine and update guest address list as needed. ">
+        <label for="vehicle3">Refine and update guest address list as needed. </label><br>
+
+        <input type="checkbox"  name="val[]" value=" Create gift registries at 2-3 national and/or
+                    online retailers.">
+        <label for="vehicle1">  Create gift registries at 2-3 national and/or
+                    online retailers.</label><br>
+
+        <input type="checkbox"  name="val[]" value="Begin planning honeymoon.">
+        <label for="vehicle2"> Begin planning honeymoon.</label><br>
+
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">6 - 7 Months</button>
+<div class="panel">
+    <form action="insert6_7months.php" method="post">
+        <input type="checkbox" name="val[]" value=" Explore wedding day hair and makeup styles">
+        <label> Explore wedding day hair and makeup styles</label><br>
+
+        <input type="checkbox"  name="val[]" value="Meet with officiant to discuss plans for ceremony">
+        <label for="vehicle2"> Meet with officiant to discuss plans for ceremony</label><br>
+
+        <input type="checkbox"  name="val[]" value="Reserve rentals: chairs, linens, lighting, décor, etc.">
+        <label for="vehicle3">Reserve rentals: chairs, linens, lighting, décor, etc.</label><br>
+
+        <input type="checkbox"  name="val[]" value="Choose dessert style and schedule tastings.">
+        <label for="vehicle1"> Choose dessert style and schedule tastings.</label><br>
+
+        <input type="checkbox"  name="val[]" value="  Decide on groomsmen attire.">
+        <label for="vehicle2">  Decide on groomsmen attire.</label><br>
+
+        <input type="checkbox"  name="val[]" value="  See your favorite designs in person. Order
+                    custom Wedding Invitation samples." >
+        <label for="vehicle3">  See your favorite designs in person. Order
+                    custom Wedding Invitation samples. </label><br>
+
+        <input type="checkbox" name="val[]" value="Hire ceremony musicians">
+        <label for="vehicle1"> Hire ceremony musicians</label><br>
+
+        <input type="checkbox" name="val[]" value="Book transportation to and from venues.">
+        <label for="vehicle2">Book transportation to and from venues.</label><br>
+
+        <input type="checkbox" name="val[]" value=" Purchase wedding bands.">
+        <label for="vehicle3"> Purchase wedding bands.</label><br>
+
+        <input type="checkbox" name="val[]" value="  Decide on a date for the Bachelor and
+                    Bachelorette party or weekend.">
+        <label for="vehicle3">  Decide on a date for the Bachelor and
+                    Bachelorette party or weekend.</label><br>
+
+        <input type="checkbox" name="val[]" value=" Order Thank You Cards (for bridal shower and
+                    gifts that arrive early)">
+        <label for="vehicle3"> Order Thank You Cards (for bridal shower and
+                    gifts that arrive early)</label><br>
+
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">4 - 5 Months</button>
+<div class="panel">
+    <form action="insert4_5months.php" method="post">
+        <input type="checkbox" name="val[]" value=" Place your full Wedding Invitation order based on 
+                your favorite custom sample! ">
+        <label> Place your full Wedding Invitation order based on 
+                your favorite custom sample! </label><br>
+
+        <input type="checkbox"  name="val[]" value="Choose flowers for: 
+                wedding party, attendants, venues, cake, etc.">
+        <label for="vehicle2"> Choose flowers for: 
+                wedding party, attendants, venues, cake, etc.</label><br>
+
+        <input type="checkbox"  name="val[]" value="Schedule dress fittings">
+        <label for="vehicle3"> Schedule dress fittings</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Book honeymoon flights and hotels.">
+        <label for="vehicle1">  Book honeymoon flights and hotels.</label><br>
+
+        <input type="checkbox"  name="val[]" value="   Book room for wedding night">
+        <label for="vehicle2">   Book room for wedding night</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Order wedding dessert/cake." >
+        <label for="vehicle3"> Order wedding dessert/cake. </label><br>
+
+        <input type="checkbox" name="val[]" value=" Plan welcome baskets for out-of-town guests.">
+        <label for="vehicle1">  Plan welcome baskets for out-of-town guests.</label><br>
+
+        <input type="checkbox" name="val[]" value=" Prepare {play/do not play} lists for DJ/band.">
+        <label for="vehicle2"> Prepare {play/do not play} lists for DJ/band.</label><br>
+
+        <input type="checkbox" name="val[]" value="  Finalize wedding guest list.">
+        <label for="vehicle3">  Finalize wedding guest list</label><br>
+
+        <input type="checkbox" name="val[]" value="   Assemble rehearsal dinner guest list.">
+        <label for="vehicle3"> Assemble rehearsal dinner guest list.</label><br>
+
+        <input type="checkbox" name="val[]" value="  Book rehearsal dinner venue.">
+        <label for="vehicle3">  Book rehearsal dinner venue.</label><br>
+
+         <input type="checkbox" name="val[]" value=" Order Rehearsal Dinner Invitations">
+        <label for="vehicle3"> Order Rehearsal Dinner Invitations</label><br>
+         
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">3 Months</button>
+<div class="panel">
+    <form action="insert3months.php" method="post">
+        <input type="checkbox" name="val[]" value="  Finalize honeymoon plans and ensure all documents 
+                are in order.">
+        <label> Finalize honeymoon plans and ensure all documents 
+                are in order. </label><br>
+
+        <input type="checkbox"  name="val[]" value=" Plan ceremony and reception seating">
+        <label for="vehicle2">  Plan ceremony and reception seating</label><br>
+
+        <input type="checkbox"  name="val[]" value="S Experiment with hair and veil with stylist">
+        <label for="vehicle3">  Experiment with hair and veil with stylist</label><br>
+
+        <input type="checkbox"  name="val[]" value="  Finalize readers, readings, and music for the 
+                ceremony.">
+        <label for="vehicle1">  Finalize readers, readings, and music for the 
+                ceremony.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Purchase: toasting flutes, serving pieces, guestbook, 
+                flower basket and ring bearer pillow">
+        <label for="vehicle2">  Purchase: toasting flutes, serving pieces, guestbook, 
+                flower basket and ring bearer pillow</label><br>
+
+        <input type="checkbox"  name="val[]" value="  Finalize reception menu." >
+        <label for="vehicle3">  Finalize reception menu. </label><br>
+
+        <input type="checkbox" name="val[]" value=" Order Menu Cards and Wedding Favors">
+        <label for="vehicle1">  Order Menu Cards and Wedding Favors</label><br>
+
+        <input type="checkbox" name="val[]" value="  Mail Wedding Invitations.">
+        <label for="vehicle2">  Mail Wedding Invitations.</label><br>
+         
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">2 Months</button>
+<div class="panel">
+    <form action="insert2months.php" method="post">
+        <input type="checkbox" name="val[]" value="  Develop system for organizing RSVPs">
+        <label>  Develop system for organizing RSVPs </label><br>
+
+        <input type="checkbox"  name="val[]" value=" Begin writing vows.">
+        <label for="vehicle2">  Begin writing vows.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Review ceremony details with officiant.">
+        <label for="vehicle3">  Review ceremony details with officiant.</label><br>
+
+        <input type="checkbox"  name="val[]" value="  Lay out the content for Wedding Programs">
+        <label for="vehicle1">   Lay out the content for Wedding Programs</label><br>
+
+        <input type="checkbox"  name="val[]" value="  Apply for marriage license">
+        <label for="vehicle2">  Apply for marriage license</label><br>
+
+        <input type="checkbox"  name="val[]" value="  Finalize seating arrangements." >
+        <label for="vehicle3">  Finalize seating arrangements. </label><br>
+
+        <input type="checkbox" name="val[]" value="  Finalize playlists with musicians.">
+        <label for="vehicle1">   Finalize playlists with musicians.</label><br>
+
+        <input type="checkbox" name="val[]" value="  Finalize fittings for wedding party and parents">
+        <label for="vehicle2">  Finalize fittings for wedding party and parents</label><br>
+
+        <input type="checkbox" name="val[]" value=" Create wedding day timeline and send to your 
+                vendors, officiant and wedding party.">
+        <label for="vehicle3">  Create wedding day timeline and send to your 
+                vendors, officiant and wedding party.</label><br>
+
+        <input type="checkbox" name="val[]" value=" Write out honeymoon itinerary for family at home.">
+        <label for="vehicle3"> Write out honeymoon itinerary for family at home.</label><br>
+
+        <input type="checkbox" name="val[]" value="  Decide Something Old, New, Borrowed, Blue.">
+        <label for="vehicle3">  Decide Something Old, New, Borrowed, Blue.</label><br>
+
+         <input type="checkbox" name="val[]" value=" Book spa and beauty treatments for you and your 
+                bridal party.">
+        <label for="vehicle3"> Book spa and beauty treatments for you and your 
+                bridal party.</label><br>
+
+        <input type="checkbox" name="val[]" value=" Book wedding day transportation.">
+        <label for="vehicle3"> Book wedding day transportation.</label><br>
+
+        <input type="checkbox" name="val[]" value="  Purchase gifts for attendants">
+        <label for="vehicle3">  Purchase gifts for attendants</label><br>
+         
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">1 Months</button>
+<div class="panel">
+    <form action="insert1months.php" method="post">
+        <input type="checkbox" name="val[]" value=" Call vendors to confirm date, times and location">
+        <label> Call vendors to confirm date, times and location </label><br>
+
+        <input type="checkbox"  name="val[]" value="  Confirm honeymoon reservations.">
+        <label for="vehicle2">   Confirm honeymoon reservations.</label><br>
+
+        <input type="checkbox"  name="val[]" value="  Pack for honeymoon.">
+        <label for="vehicle3">   Pack for honeymoon.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Pick up wedding rings.">
+        <label for="vehicle1"> Pick up wedding rings.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Confirm final plans with wedding officiant">
+        <label for="vehicle2"> Confirm final plans with wedding officiant</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Attend Bachelor/Bachelorette party." >
+        <label for="vehicle3">  Attend Bachelor/Bachelorette party. </label><br>
+
+        <input type="checkbox" name="val[]" value="   Order Wedding Programs">
+        <label for="vehicle1">    Order Wedding Programs</label><br>
+
+        <input type="checkbox" name="val[]" value="   Final dress fitting (with shoes & undergarments)">
+        <label for="vehicle2">   Final dress fitting (with shoes & undergarments)</label><br>
+
+        <input type="checkbox" name="val[]" value="  Write Thank You notes as gifts are received.">
+        <label for="vehicle3">   Write Thank You notes as gifts are received.</label><br>
+
+        <input type="checkbox" name="val[]" value="   Look for pet sitter/boarding options to cover 
+                wedding and honeymoo">
+        <label for="vehicle3">    Look for pet sitter/boarding options to cover 
+                wedding and honeymoo</label><br>
+         
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">2 Weeks</button>
+<div class="panel">
+    <form action="insert2weeks.php" method="post">
+        <input type="checkbox" name="val[]" value="  Follow up with guests who have not RSVPd.">
+        <label>  Follow up with guests who have not RSVPd. </label><br>
+
+        <input type="checkbox"  name="val[]" value=" Give final count to caterer.">
+        <label for="vehicle2">  Give final count to caterer.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Update registries.">
+        <label for="vehicle3">  Update registries.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Begin breaking in wedding shoes.">
+        <label for="vehicle1">  Begin breaking in wedding shoes.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Send playlists to DJ/band/ceremony musicians.">
+        <label for="vehicle2">  Send playlists to DJ/band/ceremony musicians.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Get final haircut and color." >
+        <label for="vehicle3"> Get final haircut and color. </label><br>
+
+        <input type="checkbox" name="val[]" value="  Delegate wedding day duties: 
+                gift table, guestbook, etc.">
+        <label for="vehicle1">   Delegate wedding day duties: 
+                gift table, guestbook, etc.</label><br>
+
+        <input type="checkbox" name="val[]" value="  Delegate someone to return tuxes, 
+                rentals and tend to wedding dress.">
+        <label for="vehicle2">  Delegate someone to return tuxes, 
+                rentals and tend to wedding dress.</label><br>
+
+        <input type="checkbox" name="val[]" value="  Send directions to wedding day 
+                limo/transportation driver.">
+        <label for="vehicle3">   Send directions to wedding day 
+l               imo/transportation driver.</label><br>
+         
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">1 Weeks</button>
+<div class="panel">
+    <form action="insert1weeks.php" method="post">
+        <input type="checkbox" name="val[]" value="  Prepare final payments to vendors and cash
+                tips for service personnel.">
+        <label>   Prepare final payments to vendors and cash
+                tips for service personnel. </label><br>
+
+        <input type="checkbox"  name="val[]" value=" Give readers their scripts.">
+        <label for="vehicle2"> Give readers their scripts.</label><br>
+
+        <input type="checkbox"  name="val[]" value="  Give photographer and videographer
+                your image and video requests">
+        <label for="vehicle3">   Give photographer and videographer
+                your image and video requests</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Lay out wedding clothes">
+        <label for="vehicle1">  Lay out wedding clothes</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Prepare wedding day emergency kit.">
+        <label for="vehicle2"> Prepare wedding day emergency kit.</label><br>
+
+        <input type="checkbox"  name="val[]" value="  Get spa treatments for you and the bridal party" >
+        <label for="vehicle3">  Get spa treatments for you and the bridal party </label><br>
+         
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">The Day Before</button>
+<div class="panel">
+    <form action="insertdaybefore.php" method="post">
+        <input type="checkbox" name="val[]" value=" Deliver welcome baskets.">
+        <label>  Deliver welcome baskets. </label><br>
+
+        <input type="checkbox"  name="val[]" value="  Get mani/pedi/massage.">
+        <label for="vehicle2">  Get mani/pedi/massage.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Attend wedding rehearsal.">
+        <label for="vehicle3">  Attend wedding rehearsal.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Have fun at the rehearsal dinner.">
+        <label for="vehicle1"> Have fun at the rehearsal dinner.</label><br>
+
+        <input type="checkbox"  name="val[]" value="  Get to bed at a decent hour!">
+        <label for="vehicle2"> Get to bed at a decent hour!</label><br>
+         
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">Wedding Day</button>
+<div class="panel">
+    <form action="insertweddingday.php" method="post">
+        <input type="checkbox" name="val[]" value="  Eat a good breakfast!">
+        <label> Eat a good breakfast! </label><br>
+
+        <input type="checkbox"  name="val[]" value=" Allow yourself plenty of time to get ready">
+        <label for="vehicle2"> Allow yourself plenty of time to get ready.</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Give wedding rings and officiant fee to best man">
+        <label for="vehicle3">  Give wedding rings and officiant fee to best man</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Relax, smile, and soak in every incredible moment">
+        <label for="vehicle1">  Relax, smile, and soak in every incredible moment</label><br>
+         
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+<button class="accordion">Beyond The Wedding</button>
+<div class="panel">
+    <form action="insertbeyondwedding.php" method="post">
+        <input type="checkbox" name="val[]" value="  Ensure tuxes and rentals have been returned">
+        <label>   Ensure tuxes and rentals have been returned </label><br>
+
+        <input type="checkbox"  name="val[]" value=" Get wedding dress to preservationist or cleaners">
+        <label for="vehicle2"> Get wedding dress to preservationist or cleaners</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Order and send Photo Thank You Cards
+                (include a wedding photo)">
+        <label for="vehicle3">  Order and send Photo Thank You Cards
+                (include a wedding photo).</label><br>
+
+        <input type="checkbox"  name="val[]" value="  Order Personalized Stationery
+                with your new last name">
+        <label for="vehicle1">  Order Personalized Stationery
+                with your new last name</label><br>
+
+        <input type="checkbox"  name="val[]" value=" Put your favorite wedding photo 
+                on a beautiful Custom Canvas.">
+        <label for="vehicle2"> Put your favorite wedding photo 
+                on a beautiful Custom Canvas.</label><br>
+         
+            <input type="submit" name="save_selection" value="Save Selection" class="btn btn-primary"> 
+      </form>
+</div>
+
+</div>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+</body>
+</html>
+
+
